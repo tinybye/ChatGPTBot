@@ -1,6 +1,7 @@
-package com.anzai.chatgptbot.model.chatgpt;
+package com.anzai.chatgptbot.model;
 
 import lombok.Data;
+import lombok.ToString;
 
 /**
  * 聊天请求参数
@@ -9,6 +10,7 @@ import lombok.Data;
  * @date 2023/3/18
  */
 @Data
+@ToString
 public class ChatRequestVO {
     /**
      * 聊天内容

@@ -1,4 +1,4 @@
-package com.anzai.chatgptbot.model.chatgpt;
+package com.anzai.chatgptbot.model;
 
 import lombok.ToString;
 

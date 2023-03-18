@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * 基本配置
+ * 基本配置，从配置文件读取
  *
  * @author tinybye
  * @date 2023/3/17
@@ -13,18 +13,18 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @Getter
 public class BaseConfig {
-    @Value("${chatgpt.apiKey}")
-    private String chatGptApiKey;
+    @Value("${chatGPT.apiKey}")
+    private String apiKey;
 
-    @Value("${chatgpt.maxTokens}")
+    @Value("${chatGPT.maxTokens}")
     private int maxTokens;
 
-    @Value("${chatgpt.temperature}")
+    @Value("${chatGPT.temperature}")
     private double temperature;
 
-    @Value("${chatgpt.maxChatNum}")
+    @Value("${chatGPT.maxChatNum}")
     private Integer maxChatNum;
 
-    @Value("${chatgpt.isContinuous}")
+    @Value("${chatGPT.isContinuous}")
     private boolean isContinuous;
 }

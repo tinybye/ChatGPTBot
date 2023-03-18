@@ -1,6 +1,6 @@
 package com.anzai.chatgptbot.controller;
 
-import com.anzai.chatgptbot.model.chatgpt.ChatRequestVO;
+import com.anzai.chatgptbot.model.ChatRequestVO;
 import com.anzai.chatgptbot.service.ChatGPTService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,8 +19,8 @@ public class ChatGptController {
     private ChatGPTService chatGptService;
 
     @PostMapping("/chat")
-    public String receiveMsgFromDd(@RequestBody ChatRequestVO chatRequestVO) throws Exception {
+    public String chat(@RequestBody ChatRequestVO chatRequestVO) {
+        log.info("request:{}", chatRequestVO);
         return chatGptService.chatToGPT(chatRequestVO.getContent(), chatRequestVO.getUserName());
     }
-
 }
